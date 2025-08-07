@@ -1,0 +1,54 @@
+name: video_viewer
+description: A Flutter application for viewing WebRTC video streams with timestamp integration.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # gRPC and Protocol Buffers
+  grpc: ^3.2.4
+  protobuf: ^3.1.0
+  
+  # WebRTC
+  flutter_webrtc: ^0.9.48+hotfix.1
+  
+  # HTTP and networking
+  http: ^1.1.0
+  web_socket_channel: ^2.4.0
+  
+  # State management
+  provider: ^6.1.1
+  
+  # UI
+  cupertino_icons: ^1.0.2
+  
+  # Utilities
+  shared_preferences: ^2.2.2
+  intl: ^0.18.1
+  logger: ^2.0.2+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: fonts/Roboto-Regular.ttf
+        - asset: fonts/Roboto-Bold.ttf
+          weight: 700
