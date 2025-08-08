@@ -1,0 +1,18 @@
+version: v2
+# Video Viewer Flutter Implementation  
+# Uses buf CLI to fetch APIs directly from GitHub
+modules:
+  - path: .
+    name: buf.build/esonti/video-viewer-impl
+deps:
+  # APIs this app consumes
+  - github.com/esonti/protobuf-sm-timestamp-api
+  - github.com/esonti/protobuf-sm-media-stream-api
+  # APIs this app implements
+  - github.com/esonti/protobuf-sm-video-viewer-api
+breaking:
+  use:
+    - FILE
+lint:
+  use:
+    - DEFAULT

@@ -57,8 +57,8 @@ dart pub global activate protoc_plugin
 
 ### 1. Clone Repository
 ```bash
-git clone <video-viewer-impl-repo>
-cd video-viewer-impl
+git clone <protobuf-sm-video-viewer-repo>
+cd protobuf-sm-video-viewer
 ```
 
 ### 2. Copy API Definitions

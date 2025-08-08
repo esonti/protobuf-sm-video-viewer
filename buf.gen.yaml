@@ -1,0 +1,23 @@
+version: v2
+# Code generation for Video Viewer Flutter Implementation
+# Generates code for APIs this app implements AND consumes
+managed:
+  enabled: true
+  optimize_for: SPEED
+plugins:
+  # Dart code generation
+  - remote: buf.build/protocolbuffers/dart
+    out: lib/generated/dart
+    opt:
+      - grpc
+inputs:
+  # Generate from all APIs this app uses
+  - git_repo: https://github.com/esonti/protobuf-sm-timestamp-api.git
+    branch: main
+    subdir: .
+  - git_repo: https://github.com/esonti/protobuf-sm-media-stream-api.git
+    branch: main
+    subdir: .
+  - git_repo: https://github.com/esonti/protobuf-sm-video-viewer-api.git
+    branch: main
+    subdir: .
